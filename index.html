@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Deepu T Nair — Senior Azure .NET / Full Stack Developer</title>
+<meta name="description" content="Portfolio of Deepu T Nair — Senior Software Engineer with 13 years of experience building and modernizing enterprise .NET platforms on Azure. Halifax, Nova Scotia." />
+<meta name="author" content="Deepu T Nair" />
+<meta name="theme-color" content="#05050d" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Deepu T Nair — Senior Azure .NET / Full Stack Developer" />
+<meta property="og:description" content="13 years turning legacy monoliths into cloud-native, event-driven platforms." />
+<meta property="og:image" content="assets/deepu.jpg" />
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23070713'/><text x='50' y='68' font-size='54' font-family='Verdana' font-weight='bold' text-anchor='middle' fill='%2322d3ee'>D</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ═══════════════ PRELOADER ═══════════════ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__mark">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <circle class="pl-ring pl-ring--track" cx="60" cy="60" r="46" />
+        <circle class="pl-ring pl-ring--fill" cx="60" cy="60" r="46" />
+      </svg>
+      <span class="preloader__initials">DN</span>
+    </div>
+    <div class="preloader__label">
+      <span class="preloader__name">DEEPU&nbsp;T&nbsp;NAIR</span>
+      <span class="preloader__pct" id="preloaderPct">0%</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ AMBIENT LAYERS ═══════════════ -->
+<canvas id="constellation" class="fx-canvas" aria-hidden="true"></canvas>
+<div class="fx-grid" aria-hidden="true"></div>
+<div class="fx-noise" aria-hidden="true"></div>
+<div class="fx-aurora" aria-hidden="true">
+  <span class="blob blob--1"></span>
+  <span class="blob blob--2"></span>
+  <span class="blob blob--3"></span>
+</div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#hero" aria-label="Home">
+    <span class="nav__brand-mark">DN</span>
+    <span class="nav__brand-text">Deepu&nbsp;T&nbsp;Nair</span>
+  </a>
+
+  <nav class="nav__links" id="navLinks" aria-label="Section navigation">
+    <a href="#about" data-nav>About</a>
+    <a href="#skills" data-nav>Skills</a>
+    <a href="#experience" data-nav>Experience</a>
+    <a href="#work" data-nav>Impact</a>
+    <a href="#credentials" data-nav>Credentials</a>
+    <a href="#contact" data-nav>Contact</a>
+    <span class="nav__indicator" id="navIndicator" aria-hidden="true"></span>
+  </nav>
+
+  <div class="nav__actions">
+    <a class="nav__social magnetic" href="https://www.linkedin.com/in/deepu-t-nair-8b315641/"
+       target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+      <svg class="brand-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.04c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+    </a>
+    <a class="btn btn--ghost btn--sm magnetic" href="assets/Deepu_Nair_Resume.docx" download>
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg>
+      Résumé
+    </a>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="hero">
+  <div class="hero__inner">
+
+    <div class="hero__copy">
+      <div class="hero__badge reveal" data-reveal="fade-up">
+        <span class="pulse-dot"></span>
+        Open to Senior / Lead engineering roles
+      </div>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="split" data-split>Deepu</span></span>
+        <span class="line"><span class="split split--accent" data-split>T&nbsp;Nair</span></span>
+      </h1>
+
+      <div class="hero__role reveal" data-reveal="fade-up" data-delay="120">
+        <span class="hero__role-static">I build</span>
+        <span class="typewriter"><span id="typeTarget"></span><span class="caret"></span></span>
+      </div>
+
+      <p class="hero__lede reveal" data-reveal="fade-up" data-delay="200">
+        Senior Software Engineer with <strong>13 years</strong> designing, building and modernizing
+        enterprise platforms in <strong>.NET</strong> and <strong>Azure</strong> — turning legacy
+        monoliths into microservice, event-driven and cloud-ready systems that ship reliably.
+      </p>
+
+      <div class="hero__meta reveal" data-reveal="fade-up" data-delay="280">
+        <span class="chip-meta">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Halifax, Nova Scotia
+        </span>
+        <span class="chip-meta">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 3 2.6 15 0 18M12 3c-2.6 3-2.6 15 0 18"/></svg>
+          Canada · India delivery experience
+        </span>
+      </div>
+
+      <div class="hero__cta reveal" data-reveal="fade-up" data-delay="360">
+        <a class="btn btn--primary magnetic" href="#contact">
+          <span>Let's talk</span>
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14m0 0-5-5m5 5-5 5"/></svg>
+        </a>
+        <a class="btn btn--ghost magnetic" href="#experience">
+          <span>View experience</span>
+        </a>
+      </div>
+
+      <ul class="hero__stats reveal" data-reveal="fade-up" data-delay="440">
+        <li>
+          <b class="counter" data-count="13" data-suffix="+">0</b>
+          <span>Years engineering</span>
+        </li>
+        <li>
+          <b class="counter" data-count="3" data-suffix="">0</b>
+          <span>Companies</span>
+        </li>
+        <li>
+          <b class="counter" data-count="4" data-suffix="">0</b>
+          <span>Devs led</span>
+        </li>
+        <li>
+          <b class="counter" data-count="3" data-suffix="">0</b>
+          <span>Certifications</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero__visual reveal" data-reveal="scale-in" data-delay="160">
+      <div class="portrait" id="portrait">
+        <div class="portrait__ring" aria-hidden="true"></div>
+        <div class="portrait__ring portrait__ring--2" aria-hidden="true"></div>
+        <div class="portrait__glow" aria-hidden="true"></div>
+        <div class="portrait__frame">
+          <img src="assets/deepu.jpg" alt="Portrait of Deepu T Nair" width="800" height="800" />
+          <div class="portrait__scan" aria-hidden="true"></div>
+        </div>
+
+        <span class="orbit-chip orbit-chip--1">C#</span>
+        <span class="orbit-chip orbit-chip--2">Azure</span>
+        <span class="orbit-chip orbit-chip--3">.NET&nbsp;Core</span>
+        <span class="orbit-chip orbit-chip--4">Docker</span>
+        <span class="orbit-chip orbit-chip--5">SQL</span>
+      </div>
+
+      <div class="hero__card glass tilt">
+        <div class="hero__card-row">
+          <span class="hero__card-key">Focus</span>
+          <span class="hero__card-val">Cloud modernization</span>
+        </div>
+        <div class="hero__card-row">
+          <span class="hero__card-key">Stack</span>
+          <span class="hero__card-val">.NET · Azure · SQL · Vue</span>
+        </div>
+        <div class="hero__card-row">
+          <span class="hero__card-key">Method</span>
+          <span class="hero__card-val">Agile Scrum · CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a class="hero__scroll" href="#about" aria-label="Scroll to about">
+    <span class="hero__scroll-track"><span class="hero__scroll-thumb"></span></span>
+    <span class="hero__scroll-text">Scroll</span>
+  </a>
+</section>
+
+<!-- ═══════════════ MARQUEE ═══════════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <div class="marquee__group">
+      <span>C#</span><i>◆</i><span>ASP.NET Core</span><i>◆</i><span>Azure DevOps</span><i>◆</i>
+      <span>Microservices</span><i>◆</i><span>Entity Framework</span><i>◆</i><span>SQL Server</span><i>◆</i>
+      <span>Docker</span><i>◆</i><span>Kubernetes (AKS)</span><i>◆</i><span>GitHub Actions</span><i>◆</i>
+      <span>Event-Driven</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Vue</span><i>◆</i>
+      <span>Node.js</span><i>◆</i><span>Databricks</span><i>◆</i><span>Liquibase</span><i>◆</i>
+    </div>
+    <div class="marquee__group">
+      <span>C#</span><i>◆</i><span>ASP.NET Core</span><i>◆</i><span>Azure DevOps</span><i>◆</i>
+      <span>Microservices</span><i>◆</i><span>Entity Framework</span><i>◆</i><span>SQL Server</span><i>◆</i>
+      <span>Docker</span><i>◆</i><span>Kubernetes (AKS)</span><i>◆</i><span>GitHub Actions</span><i>◆</i>
+      <span>Event-Driven</span><i>◆</i><span>PostgreSQL</span><i>◆</i><span>Vue</span><i>◆</i>
+      <span>Node.js</span><i>◆</i><span>Databricks</span><i>◆</i><span>Liquibase</span><i>◆</i>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-kicker reveal" data-reveal="fade-up">01 — Profile</span>
+      <h2 class="sec-title reveal" data-reveal="fade-up" data-delay="80">
+        Engineering that survives<br /><em>the next</em> ten years
+      </h2>
+    </header>
+
+    <div class="about">
+      <div class="about__text">
+        <p class="about__lead reveal" data-reveal="fade-up" data-delay="120">
+          I've spent 13 years inside enterprise codebases — the kind with a decade of history,
+          real users and no room for downtime. My work sits where legacy meets cloud: carving
+          monoliths into services, replacing brittle batch jobs with event-driven flows, and
+          making deployment a non-event.
+        </p>
+        <p class="reveal" data-reveal="fade-up" data-delay="180">
+          Most recently at <strong>Cognizant</strong> in Nova Scotia, I build reusable Azure DevOps
+          and GitHub Actions pipelines, standardized repository templates, and automated deployments
+          into Azure Databricks — so teams onboard in hours instead of weeks and releases stay boring.
+        </p>
+        <p class="reveal" data-reveal="fade-up" data-delay="240">
+          Before that I containerized .NET applications onto AKS, tuned SQL Server until slow
+          reports became instant, and led a team of four shipping a full-featured web platform
+          end to end. I work best in Agile teams where design is argued out loud and reviewed honestly.
+        </p>
+
+        <div class="about__signature reveal" data-reveal="fade-up" data-delay="300">
+          <svg viewBox="0 0 320 80" class="sig" aria-hidden="true">
+            <path class="sig__path" d="M6 56C22 6 40 4 46 34c4 22-10 32-16 18C24 36 44 20 62 30c16 9 12 30 26 24 16-7 20-42 42-32 18 8 10 38 28 30 18-8 24-38 48-26 18 9 14 32 32 24 20-9 24-30 48-16 8 5 12 8 18 2" />
+          </svg>
+          <span>Deepu T Nair — Senior Software Engineer</span>
+        </div>
+      </div>
+
+      <aside class="about__grid">
+        <div class="stat-card glass tilt reveal" data-reveal="fade-up" data-delay="140">
+          <svg viewBox="0 0 24 24" class="stat-card__icon" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <h3>Legacy modernization</h3>
+          <p>Monolith → microservices, asynchronous and event-driven, without stopping the business.</p>
+        </div>
+        <div class="stat-card glass tilt reveal" data-reveal="fade-up" data-delay="200">
+          <svg viewBox="0 0 24 24" class="stat-card__icon" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 14l9 5 9-5"/></svg>
+          <h3>Cloud &amp; containers</h3>
+          <p>Docker images orchestrated on Azure Kubernetes Service for portable, highly available workloads.</p>
+        </div>
+        <div class="stat-card glass tilt reveal" data-reveal="fade-up" data-delay="260">
+          <svg viewBox="0 0 24 24" class="stat-card__icon" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M6 8.5v5a4 4 0 0 0 4 4h5.5"/></svg>
+          <h3>Delivery automation</h3>
+          <p>Reusable CI/CD pipelines and repo templates that make every team's release path identical.</p>
+        </div>
+        <div class="stat-card glass tilt reveal" data-reveal="fade-up" data-delay="320">
+          <svg viewBox="0 0 24 24" class="stat-card__icon" aria-hidden="true"><path d="M4 18V9m5 9V5m5 13v-7m5 7V8"/></svg>
+          <h3>Performance tuning</h3>
+          <p>Query plans, indexing strategy and stored-procedure refactors that cut processing time hard.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SKILLS ═══════════════ -->
+<section class="section section--alt" id="skills">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-kicker reveal" data-reveal="fade-up">02 — Toolkit</span>
+      <h2 class="sec-title reveal" data-reveal="fade-up" data-delay="80">
+        The stack I <em>reach for</em>
+      </h2>
+      <p class="sec-sub reveal" data-reveal="fade-up" data-delay="140">
+        Depth in the Microsoft ecosystem, comfortable across the rest.
+      </p>
+    </header>
+
+    <div class="skills">
+      <div class="skill-col glass reveal" data-reveal="fade-up" data-delay="120">
+        <div class="skill-col__head">
+          <span class="skill-col__idx">A</span>
+          <h3>Backend &amp; data</h3>
+        </div>
+        <div class="bars">
+          <div class="bar" data-level="95"><span class="bar__label">C# / .NET &amp; .NET Core<b>95%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="92"><span class="bar__label">ASP.NET / MVC / REST APIs<b>92%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="90"><span class="bar__label">SQL Server / T-SQL<b>90%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="86"><span class="bar__label">Entity Framework / LINQ / ADO.NET<b>86%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="75"><span class="bar__label">PostgreSQL<b>75%</b></span><span class="bar__track"><i></i></span></div>
+        </div>
+      </div>
+
+      <div class="skill-col glass reveal" data-reveal="fade-up" data-delay="200">
+        <div class="skill-col__head">
+          <span class="skill-col__idx">B</span>
+          <h3>Cloud, DevOps &amp; architecture</h3>
+        </div>
+        <div class="bars">
+          <div class="bar" data-level="90"><span class="bar__label">Azure DevOps CI/CD<b>90%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="88"><span class="bar__label">GitHub Actions<b>88%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="85"><span class="bar__label">Microservices / event-driven<b>85%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="82"><span class="bar__label">Docker<b>82%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="76"><span class="bar__label">Kubernetes (AKS) · Databricks<b>76%</b></span><span class="bar__track"><i></i></span></div>
+        </div>
+      </div>
+
+      <div class="skill-col glass reveal" data-reveal="fade-up" data-delay="280">
+        <div class="skill-col__head">
+          <span class="skill-col__idx">C</span>
+          <h3>Frontend &amp; craft</h3>
+        </div>
+        <div class="bars">
+          <div class="bar" data-level="88"><span class="bar__label">JavaScript / HTML / CSS<b>88%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="80"><span class="bar__label">jQuery<b>80%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="74"><span class="bar__label">Vue<b>74%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="72"><span class="bar__label">Node.js<b>72%</b></span><span class="bar__track"><i></i></span></div>
+          <div class="bar" data-level="90"><span class="bar__label">Agile Scrum · unit testing · peer review<b>90%</b></span><span class="bar__track"><i></i></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-cloud reveal" data-reveal="fade-up" data-delay="200">
+      <span class="tech-pill">Microservices</span><span class="tech-pill">Event-Driven Architecture</span>
+      <span class="tech-pill">Asynchronous Systems</span><span class="tech-pill">Legacy Modernization</span>
+      <span class="tech-pill">Cloud-Ready Apps</span><span class="tech-pill">Web Services</span>
+      <span class="tech-pill">Git</span><span class="tech-pill">Visual Studio</span>
+      <span class="tech-pill">IIS</span><span class="tech-pill">Liquibase</span>
+      <span class="tech-pill">Azure Databricks</span><span class="tech-pill">Test Planning</span>
+      <span class="tech-pill">Angular (legacy)</span><span class="tech-pill">Android · iOS · Windows</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EXPERIENCE ═══════════════ -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-kicker reveal" data-reveal="fade-up">03 — Track record</span>
+      <h2 class="sec-title reveal" data-reveal="fade-up" data-delay="80">
+        Thirteen years, <em>three</em> chapters
+      </h2>
+    </header>
+
+    <div class="timeline" id="timeline">
+      <div class="timeline__spine" aria-hidden="true"><span class="timeline__fill" id="timelineFill"></span></div>
+
+      <article class="tl-item reveal" data-reveal="fade-left">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="tl-card glass tilt">
+          <div class="tl-card__top">
+            <div>
+              <h3>Senior Software Engineer</h3>
+              <p class="tl-card__org">Cognizant Technology Solutions <span>· Nova Scotia, Canada</span></p>
+            </div>
+            <span class="tl-badge tl-badge--now"><span class="pulse-dot"></span>Apr 2022 — Present</span>
+          </div>
+          <ul class="tl-list">
+            <li>Designed reusable <strong>Azure DevOps CI/CD pipelines</strong>, streamlining build, test and deployment across multiple applications.</li>
+            <li>Built and maintained <strong>GitHub Actions</strong> workflows automating builds, code-quality gates and deployments across diverse platforms and languages.</li>
+            <li>Created standardized <strong>Azure repository templates</strong> to accelerate onboarding and enforce consistency across engineering teams.</li>
+            <li>Automated deployment pipelines into <strong>Azure Databricks</strong>, enabling seamless job execution and reliable end-to-end data processing.</li>
+            <li>Refactored existing codebases and optimized system performance as part of continuous technical improvement.</li>
+            <li>Drove Agile Scrum ceremonies and partnered with QA, DevOps and product owners across the full lifecycle.</li>
+          </ul>
+          <div class="tl-tags"><span>Azure DevOps</span><span>GitHub Actions</span><span>Databricks</span><span>CI/CD</span><span>Agile</span></div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal" data-reveal="fade-left" data-delay="80">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="tl-card glass tilt">
+          <div class="tl-card__top">
+            <div>
+              <h3>Senior Software Engineer</h3>
+              <p class="tl-card__org">Cognizant Technology Solutions <span>· India</span></p>
+            </div>
+            <span class="tl-badge">Sep 2016 — Apr 2022</span>
+          </div>
+          <ul class="tl-list">
+            <li>Modernized monolithic .NET applications with components supporting <strong>microservices</strong> and asynchronous, <strong>event-driven architecture</strong>.</li>
+            <li>Built new capabilities that let enterprise clients migrate legacy systems to cloud-ready, distributed platforms.</li>
+            <li>Designed and enhanced backend modules in <strong>C#, .NET, MVC, Entity Framework, LINQ and SQL Server</strong>.</li>
+            <li><strong>Containerized</strong> .NET applications with Docker and orchestrated them on <strong>Azure Kubernetes Service</strong> for scalable, highly available workloads.</li>
+            <li>Iterated system design with the team, defined test strategies with QA and refined Agile process.</li>
+            <li>Supported delivery across modern (.NET, Angular, EF) and legacy (.NET Framework) stacks.</li>
+          </ul>
+          <div class="tl-tags"><span>Microservices</span><span>Docker</span><span>AKS</span><span>Entity Framework</span><span>SQL Server</span></div>
+        </div>
+      </article>
+
+      <article class="tl-item reveal" data-reveal="fade-left">
+        <span class="tl-dot" aria-hidden="true"></span>
+        <div class="tl-card glass tilt">
+          <div class="tl-card__top">
+            <div>
+              <h3>Senior Software Engineer</h3>
+              <p class="tl-card__org">Aibel Media and Advertising Ltd</p>
+            </div>
+            <span class="tl-badge">Apr 2013 — Aug 2016</span>
+          </div>
+          <ul class="tl-list">
+            <li><strong>Led a team of four developers</strong> building a full-featured matrimonial web application in .NET and SQL Server with performance and maintainability as first-class goals.</li>
+            <li>Designed and shipped mobile applications for <strong>Android, iOS and Windows</strong> from the ground up with consistent behaviour across devices.</li>
+            <li>Wrote and optimized complex <strong>stored procedures</strong>; tuned queries and indexing to cut processing time significantly.</li>
+            <li>Contributed to architectural improvements, code reviews and best-practice adoption across the team.</li>
+          </ul>
+          <div class="tl-tags"><span>Team lead</span><span>.NET</span><span>SQL tuning</span><span>Mobile</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ IMPACT / WORK ═══════════════ -->
+<section class="section section--alt" id="work">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-kicker reveal" data-reveal="fade-up">04 — Selected impact</span>
+      <h2 class="sec-title reveal" data-reveal="fade-up" data-delay="80">
+        Problems I've <em>actually</em> solved
+      </h2>
+      <p class="sec-sub reveal" data-reveal="fade-up" data-delay="140">
+        Four pieces of work that best describe how I engineer.
+      </p>
+    </header>
+
+    <div class="cards">
+      <article class="proj glass tilt reveal" data-reveal="fade-up" data-delay="120">
+        <span class="proj__num">01</span>
+        <div class="proj__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 7.5v3m0 0-5.2 5m5.2-5 5.2 5"/></svg>
+        </div>
+        <h3>Monolith → microservices</h3>
+        <p>
+          Decomposed long-lived enterprise .NET monoliths into service boundaries with asynchronous,
+          event-driven messaging — letting clients migrate to distributed, cloud-ready platforms
+          incrementally instead of via a risky rewrite.
+        </p>
+        <div class="proj__tags"><span>.NET</span><span>Event-driven</span><span>Async</span></div>
+      </article>
+
+      <article class="proj glass tilt reveal" data-reveal="fade-up" data-delay="180">
+        <span class="proj__num">02</span>
+        <div class="proj__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v5H4zM4 13h16v5H4z"/><path d="M7.5 8.5h.01M7.5 15.5h.01"/></svg>
+        </div>
+        <h3>One pipeline, every team</h3>
+        <p>
+          Built reusable Azure DevOps templates and GitHub Actions workflows plus standardized
+          repository scaffolding, so build, quality gates and deployment look identical across
+          applications — new engineers onboard in hours and releases became repeatable.
+        </p>
+        <div class="proj__tags"><span>Azure DevOps</span><span>GitHub Actions</span><span>Templates</span></div>
+      </article>
+
+      <article class="proj glass tilt reveal" data-reveal="fade-up" data-delay="240">
+        <span class="proj__num">03</span>
+        <div class="proj__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7l-8-4Z"/><path d="M12 12v9M4 7l8 5 8-5"/></svg>
+        </div>
+        <h3>Containers on AKS</h3>
+        <p>
+          Containerized existing .NET applications with Docker and orchestrated deployments on
+          Azure Kubernetes Service — portable workloads, horizontal scale and high availability
+          for applications originally built for a single IIS box.
+        </p>
+        <div class="proj__tags"><span>Docker</span><span>Kubernetes</span><span>Azure</span></div>
+      </article>
+
+      <article class="proj glass tilt reveal" data-reveal="fade-up" data-delay="300">
+        <span class="proj__num">04</span>
+        <div class="proj__icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-6 4 3 4-6 5 4"/><path d="M3 21h18"/></svg>
+        </div>
+        <h3>Databricks, deployed automatically</h3>
+        <p>
+          Wired GitHub Actions into Azure Databricks so data jobs deploy and execute without manual
+          steps — removing a class of hand-off errors and making end-to-end data processing
+          observable and dependable.
+        </p>
+        <div class="proj__tags"><span>Databricks</span><span>Automation</span><span>Data</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CREDENTIALS ═══════════════ -->
+<section class="section" id="credentials">
+  <div class="wrap">
+    <header class="sec-head">
+      <span class="sec-kicker reveal" data-reveal="fade-up">05 — Credentials</span>
+      <h2 class="sec-title reveal" data-reveal="fade-up" data-delay="80">
+        Certified &amp; <em>schooled</em>
+      </h2>
+    </header>
+
+    <div class="cred">
+      <div class="cred__col">
+        <h3 class="cred__h reveal" data-reveal="fade-up">Certifications</h3>
+        <div class="cert glass tilt reveal" data-reveal="fade-up" data-delay="100">
+          <div class="cert__seal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 8.7l5.4-.8L12 3Z"/></svg></div>
+          <div>
+            <h4>Microsoft Certified: Azure Developer</h4>
+            <p>Cloud application design, deployment and operations on Azure.</p>
+          </div>
+        </div>
+        <div class="cert glass tilt reveal" data-reveal="fade-up" data-delay="160">
+          <div class="cert__seal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v10H4z"/><path d="M8 11h8M8 14h5"/></svg></div>
+          <div>
+            <h4>Cognizant Certified Full Stack Developer</h4>
+            <p>End-to-end delivery across backend, frontend and data layers.</p>
+          </div>
+        </div>
+        <div class="cert glass tilt reveal" data-reveal="fade-up" data-delay="220">
+          <div class="cert__seal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4"/><path d="M6 4h12v5a6 6 0 0 1-12 0V4Z"/></svg></div>
+          <div>
+            <h4>Vibe Code Hackathon — Cognizant</h4>
+            <p>Recognized for building with Windsurf at Cognizant's internal hackathon.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cred__col">
+        <h3 class="cred__h reveal" data-reveal="fade-up">Education</h3>
+        <div class="edu glass tilt reveal" data-reveal="fade-up" data-delay="100">
+          <span class="edu__year">2007 — 2010</span>
+          <h4>Master of Computer Applications</h4>
+          <p>Kerala University</p>
+        </div>
+        <div class="edu glass tilt reveal" data-reveal="fade-up" data-delay="160">
+          <span class="edu__year">2004 — 2007</span>
+          <h4>BSc Electronics</h4>
+          <p>Kerala University</p>
+        </div>
+
+        <div class="quote glass reveal" data-reveal="fade-up" data-delay="220">
+          <span class="quote__mark" aria-hidden="true">&ldquo;</span>
+          <p>Ship it reliably, keep it readable, and leave the codebase easier than you found it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="section section--contact" id="contact">
+  <div class="wrap">
+    <div class="contact glass">
+      <div class="contact__glowline" aria-hidden="true"></div>
+      <span class="sec-kicker reveal" data-reveal="fade-up">06 — Contact</span>
+      <h2 class="contact__title reveal" data-reveal="fade-up" data-delay="80">
+        Let's build something<br /><em>worth keeping</em>
+      </h2>
+      <p class="contact__sub reveal" data-reveal="fade-up" data-delay="140">
+        Available for senior and lead engineering roles in Canada. Happy to talk architecture,
+        modernization or delivery automation.
+      </p>
+
+      <div class="contact__links">
+        <a class="clink magnetic reveal" data-reveal="fade-up" data-delay="180" href="mailto:tnairdeepu@gmail.com">
+          <span class="clink__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span class="clink__body"><b>Email</b><i>tnairdeepu@gmail.com</i></span>
+          <svg viewBox="0 0 24 24" class="clink__arrow" aria-hidden="true"><path d="M7 17 17 7m0 0h-7m7 0v7"/></svg>
+        </a>
+        <a class="clink magnetic reveal" data-reveal="fade-up" data-delay="220"
+           href="https://www.linkedin.com/in/deepu-t-nair-8b315641/" target="_blank" rel="noopener noreferrer">
+          <span class="clink__icon"><svg class="brand-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.04c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></span>
+          <span class="clink__body"><b>LinkedIn</b><i>in/deepu-t-nair</i></span>
+          <svg viewBox="0 0 24 24" class="clink__arrow" aria-hidden="true"><path d="M7 17 17 7m0 0h-7m7 0v7"/></svg>
+        </a>
+        <a class="clink magnetic reveal" data-reveal="fade-up" data-delay="260" href="tel:+16479946021">
+          <span class="clink__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4 5.2A2 2 0 0 1 6 3Z"/></svg></span>
+          <span class="clink__body"><b>Phone</b><i>+1 647-994-6021</i></span>
+          <svg viewBox="0 0 24 24" class="clink__arrow" aria-hidden="true"><path d="M7 17 17 7m0 0h-7m7 0v7"/></svg>
+        </a>
+        <a class="clink magnetic reveal" data-reveal="fade-up" data-delay="300" href="assets/Deepu_Nair_Resume.docx" download>
+          <span class="clink__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 19h16"/></svg></span>
+          <span class="clink__body"><b>Résumé</b><i>Download .docx</i></span>
+          <svg viewBox="0 0 24 24" class="clink__arrow" aria-hidden="true"><path d="M7 17 17 7m0 0h-7m7 0v7"/></svg>
+        </a>
+      </div>
+
+      <p class="contact__loc reveal" data-reveal="fade-up" data-delay="340">
+        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Halifax, Nova Scotia · References available on request
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <span>© <span id="year">2026</span> Deepu T Nair</span>
+    <span class="footer__mid">Built from scratch — HTML, CSS &amp; vanilla JS</span>
+    <a href="#hero" class="footer__top magnetic">
+      Back to top
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M12 20V4m0 0-5 5m5-5 5 5"/></svg>
+    </a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
